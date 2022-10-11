@@ -13,16 +13,23 @@ the time/amount of days that have passed will be stored in this class.
 it will contain functions to print the owned animals/crops of the user
 */
 class Farm {
-    private:
+    protected:
         int time;
         int bank_account;
+        int cow_count;
+        int sheep_count;
+        int pig_count;
+        int wheat_count;
+        int soybean_count;
+        int corn_count;
         Animals* animal_array;
         Produce* produce_array;
     public:
         bool win();
         void print_crops();
         void print_animals();
-
+        Farm();
+        ~Farm();
 
 };
 
