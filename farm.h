@@ -3,6 +3,9 @@
 
 #include <string>
 #include <iostream>
+#include "animals.h"
+#include "farmer.h"
+#include "cows.h"
 
 
 using namespace std;
@@ -22,8 +25,30 @@ class Farm {
         int wheat_count;
         int soybean_count;
         int corn_count;
-        Animals* animal_array;
-        Produce* produce_array;
+        /* the arrays storing the produce need to be in the farmer array
+        so the buy_goods sell_goods functions can easily access the array
+        */
+        // new and old arrays are so the arrays can be dynamically increased
+        // in size each time the user buys a product and then the old array 
+        // copied across (like in the prac exam 3. same code)
+
+        // the arrays that will store the animals and crops contained on the farm
+        Animals** animal_array;
+        Cows *cow_array_old;
+        Cows *cow_array_new;
+        Sheep* sheep_array_old;
+        Sheep* sheep_array_new;
+        Pig* pig_array_old;
+        Pig* pig_array_new;
+        Produce** produce_array;
+        Wheat* wheat_array_old;
+        Wheat* wheat_array_new;
+        Soybean* soybean_array_old;
+        Soybean* soybean_array_new;
+        Corn* corn_array_old;
+        Corn* corn_array_new;
+
+
     public:
         bool win();
         void print_crops();
