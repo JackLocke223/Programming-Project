@@ -6,7 +6,7 @@
 #include "pigs.h"
 #include "sheeps.h"
 #include "cows.h"
-//#include "crops.h"
+#include "crops.h"
 
 using namespace std;
 
@@ -67,15 +67,6 @@ void Farm::print_animals(char animal_type) {
         }
     }
 }
-
-void Farm::add_money(int value){
-    bank_account = bank_account + value;
-};
-
-
-void Farm::take_money(int value) {
-    bank_account = bank_account - value;
-};
     Farm::Farm() {
         int time = 1;
         int bank_account = 500;
@@ -88,9 +79,8 @@ void Farm::take_money(int value) {
 
     };
 
-
-
     Farm::~Farm() {
+        delete[] cow_array;
 
     }
 
