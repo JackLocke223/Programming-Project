@@ -13,7 +13,7 @@ Farm::Farm() {
     bank_account = 500;
     //Farm::animal_array = new Animals[3];
     Farm::animal_array[0] = Farm::cow_array_old;
-    Farm::animal_array[1] = Farm::chicken_array_old;
+    Farm::animal_array[1] = Farm::pig_array_old;
     Farm::animal_array[2] = Farm::sheep_array_old;
 
     Farm::produce_array[0] = Farm::wheat_array_old;
@@ -32,7 +32,7 @@ bool Farm::win() {
     }
 }
 
-/* think we will have to have an animals array which stores "cow sheep pig" as pointers and they point to 
+/* think we will have to have an animals array which stores "cow sheep chicken" as pointers and they point to 
 subarrays containing each
 same for crops. check the Farm constructor i made the above how we store it */
 
@@ -53,7 +53,7 @@ void Farm::print_animals(char animal_type) {
         break;
         case 'p' :
         Farm::print_column = 2;
-        Farm::count_of_printable = Chickens::get_count();
+        Farm::count_of_printable = Pigs::get_count();
         break;
     }
     // for loop to print the column of the type of animals the user wants to see
@@ -69,7 +69,7 @@ void Farm::print_animals(char animal_type) {
         int bank_account = 500;
         int cow_count = 0;
         int sheep_count = 0;
-        int chicken_count = 0;
+        int pig_count = 0;
         int corn_count = 0;
         int soybean_count = 0;
         int wheat_count = 0;

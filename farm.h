@@ -7,7 +7,7 @@
 #include "farmer.h"
 #include "cows.h"
 #include "sheeps.h"
-#include "chickens.h"
+#include "pigs.h"
 
 using namespace std;
 
@@ -22,7 +22,7 @@ class Farm {
         int bank_account;
         int cow_count;
         int sheep_count;
-        int chicken_count;
+        int pig_count;
         int wheat_count;
         int soybean_count;
         int corn_count;
@@ -39,8 +39,8 @@ class Farm {
         Cows *cow_array_new;
         Sheeps* sheep_array_old;
         Sheeps* sheep_array_new;
-        Chickens* chicken_array_old;
-        Chickens* chicken_array_new;
+        Pigs* pig_array_old;
+        Pigs* pig_array_new;
         Produce** produce_array;
         Wheat* wheat_array_old;
         Wheat* wheat_array_new;
