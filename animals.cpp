@@ -17,24 +17,61 @@ Animals::Animals() {
 }
 
 void Animals::feed() {
-    //if (chosen cow) involves do_task
-    Animals::cow_hunger= 100;
-        //if (chosen sheep) involves do_task
+    
+    //if (chosen feed_cow) involves do_task
+    Animals::cow_hunger;
+    if(cow_hunger>=100);{
+        cout << "Can not feed due to cow being full." << endl;
+    };
+    if(cow_hunger<100){
+        cow_hunger=cow_hunger+10;
+    }
+
+
+        //if (chosen feed_sheep) involves do_task
     Animals::sheep_hunger= 100;
-        //if (chosen pig) involves do_task
+        if(sheep_hunger==100){
+        cout << "Can not feed due to sheep being full." << endl;
+    };
+        if(sheep_hunger<100){
+        sheep_hunger=sheep_hunger+10;
+    }
+
+
+        //if (chosen feed_pig) involves do_task
     Animals::pig_hunger= 100;
+        if(pig_hunger==100){
+        cout << "Can not feed due to pig being full." << endl;
+    };
+        if(pig_hunger<100){
+        pig_hunger=pig_hunger+10;
+    }
 
 
 };
 void Animals::die()  {
-        // if hunger goes to 0 of cow
+        if(cow_hunger = 0) {
         Animals::cow_chance_of_death = 100; // and dies
-        Farm::cow_count=cow_count-1;
-        // if hunger goes to 0 of sheep
+        }
+        if(cow_chance_of_death = 100){
+            Farm::cow_count=cow_count-1;
+        cout << "Cow has died!!!!." << endl;
+        }
+
+        if(sheep_hunger = 0) {
         Animals:: sheep_chance_of_death = 100;// and dies
-        Farm::sheep_count=sheep_count-1;
-        // if hunger goes to 0 of pig
+        }
+        if(sheep_chance_of_death = 100){
+            Farm::sheep_count=sheep_count-1;
+        cout << "Sheep has died!!!!." << endl;
+        }
+
+        if(pig_hunger = 0) {
         Animals:: pig_chance_of_death = 100;// and dies
-        Farm::pig_count=pig_count-1;
+        }
+        if(pig_chance_of_death = 100){
+            Farm::pig_count=pig_count-1;
+        cout << "Pig has died!!!!." << endl;
+        }
     ;
 }
