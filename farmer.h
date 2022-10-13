@@ -14,8 +14,7 @@ class Farmer : public Farm {
     int energy;
     public:
     void sleep();
-    virtual void buy_goods() = 0;
-    virtual void sell_goods() = 0;
+    int get_money();
     void do_task();
     Farmer();
     ~Farmer();

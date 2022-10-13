@@ -21,6 +21,6 @@ Farmer::Farmer() : Farm::Farm() {
 };
 
 Farmer::~Farmer() {
-    delete [] animal_array;
-    delete [] produce_array;
+    //delete [] animal_array;
+    //delete [] produce_array;
 }

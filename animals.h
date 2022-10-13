@@ -20,6 +20,7 @@ class Animals : public Farm_goods {
  public:
         void feed();
         void die();
+void buy_goods();
 
 };
 

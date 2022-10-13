@@ -75,3 +75,5 @@ void Animals::die()  {
         }
     ;
 }
+
+void Farm_goods::buy_goods(){return;}
