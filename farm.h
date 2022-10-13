@@ -8,6 +8,9 @@
 #include "cows.h"
 #include "sheeps.h"
 #include "pigs.h"
+#include "soybean.h"
+#include "wheat.h"
+#include "corn.h"
 
 using namespace std;
 
