@@ -20,6 +20,16 @@ void Cows::buy_goods() {
 };
 
 void Cows::sell_goods() {
+    count_cows--;
+    cow_array_new = new Cows [count_cows];
+    for (int i = 0;  i < count_cows; i++) {
+        cow_array_new[i] = cow_array_old[i+1];
+    }
+    Cows *delete_cow = &cow_array_old[0];
+    delete delete_cow;
+    delete_cow = NULL;
+
+
     
 
 }
