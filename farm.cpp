@@ -3,6 +3,9 @@
 #include <iostream>
 #include "farm_goods.h"
 #include "animals.h"
+#include "pigs.h"
+#include "sheep.h"
+#include "cows.h"
 //#include "crops.h"
 
 using namespace std;
@@ -16,9 +19,9 @@ Farm::Farm() {
     Farm::animal_array[1] = Farm::pig_array_old;
     Farm::animal_array[2] = Farm::sheep_array_old;
 
-    Farm::produce_array[0] = Farm::wheat_array_old;
-    Farm::produce_array[1] = Farm::soybean_array_old;
-    Farm::produce_array[2] = Farm::corn_array_old;
+    Farm::farm_goods_array[0] = Farm::wheat_array_old;
+    Farm::farm_goods_array[1] = Farm::soybean_array_old;
+    Farm::farm_goods_array[2] = Farm::corn_array_old;
     
 
 };
