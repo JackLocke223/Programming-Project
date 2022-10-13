@@ -17,7 +17,7 @@ Animals::Animals() {
 }
 
 void Animals::feed() {
-    
+
     //if (chosen feed_cow) involves do_task
     Animals::cow_hunger;
     if(cow_hunger>=100);{
@@ -25,6 +25,7 @@ void Animals::feed() {
     };
     if(cow_hunger<100){
         cow_hunger=cow_hunger+10;
+        cout<< "The cows hunger is at" <<Animals::cow_hunger << endl;
     }
 
 
@@ -35,6 +36,8 @@ void Animals::feed() {
     };
         if(sheep_hunger<100){
         sheep_hunger=sheep_hunger+10;
+        cout<< "The sheeps hunger is at" <<Animals::sheep_hunger << endl;
+
     }
 
 
@@ -45,6 +48,8 @@ void Animals::feed() {
     };
         if(pig_hunger<100){
         pig_hunger=pig_hunger+10;
+        cout<< "The pigs hunger is at" <<Animals::pig_hunger << endl;
+
     }
 
 

@@ -16,7 +16,6 @@ Crops::Crops() {
         int corn_price = 100;
 }
 
-void water() {
 void Crops::water() {
     
     //if (chosen water_wheat) involves do_task
@@ -26,6 +25,7 @@ void Crops::water() {
     };
     if(wheat_hydration<100){
         wheat_hydration=wheat_hydration+10;
+        cout<< "The wheat hydration is at" <<Crops::wheat_hydration << endl;
     }
 
         //if (chosen water_soybean) involves do_task
@@ -34,14 +34,38 @@ void Crops::water() {
         cout << "Can not water due to soybean being fully hydrated." << endl;
     };
     if(soybean_hydration<100){
-        wheat_hydration=wheat_hydration+10;
+        soybean_hydration=soybean_hydration+10;
+        cout<< "The soybeans hydration is at" <<Crops::soybean_hydration << endl;
+    }
+
+           //if (chosen water_corn) involves do_task
+    Crops::corn_hydration;
+    if(corn_hydration>=100);{
+        cout << "Can not water due to corn being fully hydrated." << endl;
+    };
+    if(corn_hydration<100){
+        corn_hydration=corn_hydration+10;
+        cout<< "The corns hydration is at" <<Crops::corn_hydration << endl;
     }
 
 
 
 };
 
-void die()  {
+void Crops::die()  {
+        if(wheat_hydration = 0) {
+        Farm::wheat_count=wheat_count-1;
+        cout << "Wheat has died!!!!." << endl;
+        }
 
+        if(soybean_hydration = 0) {
+        Farm::soybean_count=soybean_count-1;
+        cout << "Soybean has died!!!!." << endl;
+        }
+
+        if(corn_hydration = 0) {
+        Farm::corn_count=corn_count-1;
+        cout << "Corn has died!!!!." << endl;
+        }
     ;
 }
