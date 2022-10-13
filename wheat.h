@@ -7,7 +7,7 @@
 #include <iostream>
 #include <string>
 
-class Wheat : public Crop {
+class Wheat : public Crops {
     protected:
     static int count_wheat;
 

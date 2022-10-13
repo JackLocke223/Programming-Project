@@ -10,12 +10,18 @@
 class Cows : public Animals {
     protected:
     static int count_cows;
+    static bool cows_fed();
+    Cows *cow_array_old;
+    Cows *cow_array_new;
 
     public:
     static int get_count(){return count_cows;};
     void buy_goods();
+    void feed();
+    void sell_goods();
 
 };
 static int count_cows = 0;
+static bool cows_fed = false;
 
 #endif

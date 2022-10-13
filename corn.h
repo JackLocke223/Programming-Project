@@ -4,10 +4,11 @@
 #include "farmer.h"
 #include "farm.h"
 #include "farm_goods.h"
+#include "crops.h"
 #include <iostream>
 #include <string>
 
-class Corn : public Crop {
+class Corn : public Crops {
     protected:
     static int count_corn;
 

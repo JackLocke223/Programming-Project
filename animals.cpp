@@ -38,3 +38,5 @@ void Animals::die()  {
         Farm::pig_count=pig_count-1;
     ;
 }
+
+void Farm_goods::buy_goods(){return;}
