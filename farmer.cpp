@@ -5,9 +5,17 @@
 
 // function will end the day and restore the farmers energy to 100(full)
 void Farmer::sleep(){
-    Farmer::energy = 100;
-    Farm::time = Farm::time + 1;
+    energy = 100;
+    time = time + 1;
     return;
+}
+
+int Farmer::get_money() {
+    return money;
+}
+
+void Farmer::set_money(int _money) {
+    money = _money;
 }
     
 // function will remove energy when the user commits a task

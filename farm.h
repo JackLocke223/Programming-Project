@@ -68,6 +68,7 @@ class Farm {
         void print_animals(char animal_type);
         void add_money(int value);
         void take_money(int value);
+        int get_time();
         Farm();
         ~Farm();
 

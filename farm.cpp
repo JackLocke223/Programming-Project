@@ -35,6 +35,10 @@ bool Farm::win() {
     }
 }
 
+int Farm::get_time(){
+    return time;
+}
+
 /* think we will have to have an animals array which stores "cow sheep chicken" as pointers and they point to 
 subarrays containing each
 same for crops. check the Farm constructor i made the above how we store it */

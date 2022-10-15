@@ -12,9 +12,11 @@ using namespace std;
 class Farmer : public Farm {
     protected:
     int energy;
+    int money;
     public:
     void sleep();
     int get_money();
+    void set_money(int _money);
     void do_task();
     Farmer();
     ~Farmer();
