@@ -1,5 +1,3 @@
-#ifndef D2C5679C_38BD_464A_87B6_E9D9DC6DDCE5
-#define D2C5679C_38BD_464A_87B6_E9D9DC6DDCE5
 #ifndef FARM_H
 #define FARM_H
 
@@ -76,6 +74,3 @@ class Farm {
 };
 
 #endif
-
-
-#endif /* D2C5679C_38BD_464A_87B6_E9D9DC6DDCE5 */

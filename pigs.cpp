@@ -14,8 +14,8 @@ void Pigs::buy_goods() {
     }
     pig_array_new[count_pigs-1] = *new_pig;
     delete [] pig_array_old;
-    pig_array_old = new Cows[count_cows];
-    cow_array_old = pig_array_new;
+    pig_array_old = new Pigs[count_pigs];
+    pig_array_old = pig_array_new;
 };
 
 void Cows::sell_goods() {
