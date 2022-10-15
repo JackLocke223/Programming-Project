@@ -1,7 +1,9 @@
+#ifndef FARMER_H
+#define FARMER_H
+
 #include "farm.h"
 #include <iostream>
 #include <string>
-
 using namespace std;
 
 /* class of farmer, it has functions and data members to keep track of the
@@ -20,5 +22,5 @@ class Farmer : public Farm {
     void do_task();
     Farmer();
     ~Farmer();
-
 };
+#endif

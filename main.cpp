@@ -71,26 +71,23 @@ int main(){
          cout << "Enter 'cow' to sell a cow ($1500)\n";
          cin >> input;
          if (input == "pig") {
-            if (count_pigs > 0) {
-               Pigs pig = Pigs();
-               pig.sell_goods();
-               farmer.set_money(farmer.get_money() - 500);
+            if (farm.pig_array_old[0].get_age() > 5) {
+               farm.pig_array_old[0].sell_goods();
+               farmer.set_money(farmer.get_money() + 500);
             }
             else {cout << "No pigs to sell.\n";}
          }
          if (input == "sheep") {
-            if (count_sheep >= 750) {
-               Sheeps sheep = Sheeps();
-               sheep.sell_goods();
-               farmer.set_money(farmer.get_money() - 750);
+            if (farm.sheep_array_old[0].get_age() > 0) {
+               farm.sheep_array_old[0].sell_goods();
+               farmer.set_money(farmer.get_money() + 750);
             }
             else {cout << "No sheep to sell.\n";}
          }
          if (input == "cow") {
-            if (farmer.get_money() >= 1500) {
-               Cows cow = Cows();
-               cow.sell_goods();
-               farmer.set_money(farmer.get_money() - 1500);
+            if (farm.cow_array_old[0].get_age() > 0) {
+               farm.cow_array_old[0].sell_goods();
+               farmer.set_money(farmer.get_money() + 1500);
             }
             else {cout << "No cows to sell.\n";}
          }

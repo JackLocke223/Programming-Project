@@ -3,6 +3,7 @@
 #include "farm_goods.h"
 #include <iostream>
 #include <string>
+#include "cows.h"
 
 
 void Cows::buy_goods() {
@@ -27,8 +28,11 @@ void Cows::sell_goods() {
     Cows *delete_cow = &cow_array_old[0];
     delete delete_cow;
     delete_cow = NULL;
+}
 
-
-    
-
+bool Cows::ready_to_sell(){
+    if (age >= 5) {
+        return true;
+    }
+    else {return false;}
 }

@@ -1,8 +1,10 @@
 #include "farmer.h"
 #include "farm.h"
 #include "farm_goods.h"
+#include "soybean.h"
 #include <iostream>
 #include <string>
+
 
 
 void Soybean::buy_goods() {

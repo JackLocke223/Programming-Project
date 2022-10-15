@@ -19,6 +19,7 @@ class Sheeps : public Animals {
     void buy_goods();
     void feed();
     void sell_goods();
+    bool ready_to_sell();
 };
 static int count_sheeps = 0;
 static bool sheeps_fed = false;

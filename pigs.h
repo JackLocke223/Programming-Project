@@ -11,10 +11,10 @@ class Pigs : public Animals {
     protected:
     static int count_pigs;
     static bool pigs_fed();
-    Pigs *pig_array_old;
-    Pigs *pig_array_new;
 
     public:
+    Pigs *pig_array_old;
+    Pigs *pig_array_new;
     static int get_count(){return count_pigs;};
     void buy_goods();
     void feed();

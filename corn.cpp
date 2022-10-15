@@ -3,6 +3,7 @@
 #include "farm_goods.h"
 #include <iostream>
 #include <string>
+#include "corn.h"
 
 
 void Corn::buy_goods() {

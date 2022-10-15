@@ -1,6 +1,7 @@
 #include "farmer.h"
 #include "farm.h"
 #include "farm_goods.h"
+#include "sheeps.h"
 #include <iostream>
 #include <string>
 
@@ -27,8 +28,4 @@ void Sheeps::sell_goods() {
     Sheeps *delete_sheep = &sheep_array_old[0];
     delete delete_sheep;
     delete_sheep = NULL;
-
-
-    
-
 }

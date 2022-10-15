@@ -1,6 +1,7 @@
 #include "farmer.h"
 #include "farm.h"
 #include "farm_goods.h"
+#include "pigs.h"
 #include <iostream>
 #include <string>
 

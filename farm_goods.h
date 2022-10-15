@@ -13,7 +13,7 @@ class Farm_goods {
     int age;
     int value;
     public:
-    void ready_to_sell();
+    int get_age();
     void increase_age();
     virtual void feed() = 0;
     // might be able to make these not abstract
