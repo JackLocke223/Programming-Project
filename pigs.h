@@ -1,7 +1,7 @@
 #ifndef PIGS_H
 #define PIGS_H
 
-#include "farmer.h"
+//#include "farmer.h"
 #include "farm.h"
 #include "farm_goods.h"
 #include <iostream>
@@ -21,6 +21,6 @@ class Pigs : public Animals {
     void sell_goods();
 };
 static int count_pigs = 0;
-static bool cows_fed = false;
+static bool pigs_fed = false;
 
 #endif

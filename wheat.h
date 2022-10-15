@@ -1,7 +1,7 @@
 #ifndef WHEAT_H
 #define WHEAT_H
 
-#include "farmer.h"
+//#include "farmer.h"
 #include "farm.h"
 #include "farm_goods.h"
 #include "crops.h"

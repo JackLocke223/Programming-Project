@@ -1,7 +1,7 @@
 #ifndef COWS_H
 #define COWS_H
 
-#include "farmer.h"
+//#include "farmer.h"
 #include "farm.h"
 #include "farm_goods.h"
 #include <iostream>

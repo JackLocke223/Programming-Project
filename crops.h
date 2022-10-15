@@ -1,7 +1,7 @@
 #ifndef CROPS_H
 #define CROPS_H
 
-#include "farmer.h"
+//#include "farmer.h"
 #include "farm.h"
 #include "farm_goods.h"
 #include <iostream>
