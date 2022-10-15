@@ -1,7 +1,7 @@
 #ifndef FARMER_H
 #define FARMER_H
 
-#include "farm.h"
+//#include "farm.h"
 #include <iostream>
 #include <string>
 using namespace std;
