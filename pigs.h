@@ -14,7 +14,6 @@ class Pigs : public Animals {
     public:
     static int get_count(){return count_pigs;};
     void buy_goods();
-
 };
 static int count_pigs = 0;
 

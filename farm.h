@@ -1,3 +1,5 @@
+#ifndef D2C5679C_38BD_464A_87B6_E9D9DC6DDCE5
+#define D2C5679C_38BD_464A_87B6_E9D9DC6DDCE5
 #ifndef FARM_H
 #define FARM_H
 
@@ -54,8 +56,8 @@ class Farm {
         Cows *cow_array_new;
         Sheeps* sheep_array_old;
         Sheeps* sheep_array_new;
-        Pigs* pig_array_old;
-        Pigs* pig_array_new;
+        Pigs *pig_array_old;
+        Pigs *pig_array_new;
         Farm_goods** farm_goods_array;
         Wheat* wheat_array_old;
         Wheat* wheat_array_new;
@@ -74,3 +76,6 @@ class Farm {
 };
 
 #endif
+
+
+#endif /* D2C5679C_38BD_464A_87B6_E9D9DC6DDCE5 */

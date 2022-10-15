@@ -16,7 +16,6 @@ void Cows::buy_goods() {
     delete [] cow_array_old;
     cow_array_old = new Cows[count_cows];
     cow_array_old = cow_array_new;
-
 };
 
 void Cows::sell_goods() {
