@@ -17,6 +17,12 @@ int Farm_goods::get_age(){return age;}
 
     
     Farm_goods::Farm_goods(){
+        cow_count = 0;
+        sheep_count = 0;
+        pig_count = 0;
+        corn_count = 0;
+        soybean_count = 0;
+        wheat_count = 0;
         age = 0;
     };
 

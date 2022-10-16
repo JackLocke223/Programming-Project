@@ -2,6 +2,7 @@
 #define SHEEPS_H
 
 //#include "farmer.h"
+#include "animals.h"
 #include "farm.h"
 #include "farm_goods.h"
 #include <iostream>

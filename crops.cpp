@@ -54,17 +54,17 @@ void Crops::water() {
 
 void Crops::die()  {
         if(wheat_hydration = 0) {
-        Farm::wheat_count=wheat_count-1;
+        wheat_count=wheat_count-1;
         cout << "Wheat has died!!!!." << endl;
         }
 
         if(soybean_hydration = 0) {
-        Farm::soybean_count=soybean_count-1;
+        soybean_count=soybean_count-1;
         cout << "Soybean has died!!!!." << endl;
         }
 
         if(corn_hydration = 0) {
-        Farm::corn_count=corn_count-1;
+        corn_count=corn_count-1;
         cout << "Corn has died!!!!." << endl;
         }
     ;

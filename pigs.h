@@ -3,6 +3,7 @@
 
 //#include "farmer.h"
 #include "farm.h"
+#include "animals.h"
 #include "farm_goods.h"
 #include <iostream>
 #include <string>

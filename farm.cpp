@@ -72,12 +72,12 @@ void Farm::take_money(int value) {
 Farm::Farm() {
     int time = 1;
     int bank_account = 500;
-    int cow_count = 0;
-    int sheep_count = 0;
-    int pig_count = 0;
-    int corn_count = 0;
-    int soybean_count = 0;
-    int wheat_count = 0;
+    //int cow_count = 0;
+    //int sheep_count = 0;
+    //int pig_count = 0;
+    //int corn_count = 0;
+    //int soybean_count = 0;
+    //int wheat_count = 0;
     //animal_array = new Animals[3];
     //animal_array[0] = cow_array_old;
     //animal_array[1] = pig_array_old;

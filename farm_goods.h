@@ -13,6 +13,12 @@ class Farm_goods {
     int age;
     int value;
     public:
+    int cow_count;
+    int sheep_count;
+    int pig_count;
+    int wheat_count;
+    int soybean_count;
+    int corn_count;
     int get_age();
     void increase_age();
     virtual void feed() = 0;

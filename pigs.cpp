@@ -19,15 +19,15 @@ void Pigs::buy_goods() {
     pig_array_old = pig_array_new;
 };
 
-void Cows::sell_goods() {
-    count_cows--;
-    cow_array_new = new Cows [count_cows];
-    for (int i = 0;  i < count_cows; i++) {
-        cow_array_new[i] = cow_array_old[i+1];
+void Pigs::sell_goods() {
+    count_pigs--;
+    pig_array_new = new Pigs [count_pigs];
+    for (int i = 0;  i < count_pigs; i++) {
+        pig_array_new[i] = pig_array_old[i+1];
     }
-    Cows *delete_cow = &cow_array_old[0];
-    delete delete_cow;
-    delete_cow = NULL;
+    Pigs *delete_pig = &pig_array_old[0];
+    delete delete_pig;
+    delete_pig = NULL;
 
 
     

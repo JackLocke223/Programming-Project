@@ -29,10 +29,3 @@ void Cows::sell_goods() {
     delete delete_cow;
     delete_cow = NULL;
 }
-
-bool Cows::ready_to_sell(){
-    if (age >= 5) {
-        return true;
-    }
-    else {return false;}
-}

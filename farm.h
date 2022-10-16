@@ -9,11 +9,9 @@ class Animals;
 class Cows;
 class Sheeps;
 class Pigs;
-#include "wheat.h"
-#include "soybean.h"
-#include "corn.h"
-
-
+class Wheat;
+class Soybean;
+class Corn;
 
 using namespace std;
 
@@ -56,12 +54,12 @@ class Farm {
         Soybean* soybean_array_new;
         Corn* corn_array_old;
         Corn* corn_array_new;
-        int cow_count;
-        int sheep_count;
-        int pig_count;
-        int wheat_count;
-        int soybean_count;
-        int corn_count;
+        //int cow_count;
+        //int sheep_count;
+        //int pig_count;
+        //int wheat_count;
+        //int soybean_count;
+        //int corn_count;
         bool win();
         void print_crops();
         void print_animals(char animal_type);

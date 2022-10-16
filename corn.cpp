@@ -8,9 +8,9 @@
 
 void Corn::buy_goods() {
     Corn* new_corn = new Corn;
-    count_cows++;
+    count_corn++;
     corn_array_new = new Corn [count_corn];
-    for (int i = 0;  i < count_cows; i++) {
+    for (int i = 0;  i < count_corn; i++) {
         corn_array_new[i] = corn_array_old[i];
     }
     corn_array_new[count_corn-1] = *new_corn;

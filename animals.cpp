@@ -67,7 +67,7 @@ void Animals::die()  {
         Animals:: sheep_chance_of_death = 100;// and dies
         }
         if(sheep_chance_of_death = 100){
-            Farm::sheep_count=sheep_count-1;
+            sheep_count=sheep_count-1;
             cout << "Sheep has died!!!!." << endl;
         }
 
@@ -75,7 +75,7 @@ void Animals::die()  {
         Animals:: pig_chance_of_death = 100;// and dies
         }
         if(pig_chance_of_death = 100){
-            Farm::pig_count=pig_count-1;
+            pig_count=pig_count-1;
             cout << "Pig has died!!!!." << endl;
         }
     ;
