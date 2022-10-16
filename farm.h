@@ -3,12 +3,12 @@
 
 #include <string>
 #include <iostream>
-#include "animals.h"
+class Animals;
 //#include "farmer.h"
-#include "farm_goods.h"
-#include "cows.h"
-#include "sheeps.h"
-#include "pigs.h"
+#include "Farm_goods.h"
+class Cows;
+class Sheeps;
+class Pigs;
 #include "wheat.h"
 #include "soybean.h"
 #include "corn.h"
@@ -26,13 +26,6 @@ class Farm {
     protected:
         int time;
         int bank_account;
-        /* int cow_count;
-        int sheep_count;
-        int pig_count;
-        int wheat_count;
-        int soybean_count;
-        int corn_count;
-        */
 
         /* the arrays storing the produce need to be in the farmer array
         so the buy_goods sell_goods functions can easily access the array
@@ -49,7 +42,7 @@ class Farm {
 
     public:
     // made the arrays public so they can be easily accessed.
-    Animals** animal_array;
+        Animals** animal_array;
         Cows *cow_array_old;
         Cows *cow_array_new;
         Sheeps* sheep_array_old;
@@ -63,15 +56,21 @@ class Farm {
         Soybean* soybean_array_new;
         Corn* corn_array_old;
         Corn* corn_array_new;
+        int cow_count;
+        int sheep_count;
+        int pig_count;
+        int wheat_count;
+        int soybean_count;
+        int corn_count;
         bool win();
         void print_crops();
         void print_animals(char animal_type);
         void add_money(int value);
         void take_money(int value);
+        void set_time(int new_time);
         int get_time();
         Farm();
         ~Farm();
-
 };
 
 #endif

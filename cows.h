@@ -4,6 +4,7 @@
 //#include "farmer.h"
 #include "farm.h"
 #include "farm_goods.h"
+#include "animals.h"
 #include <iostream>
 #include <string>
 

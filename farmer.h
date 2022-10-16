@@ -11,7 +11,7 @@ using namespace std;
     from the farm to make money; ie win the game 
     */
 
-class Farmer {
+class Farmer : public Farm {
     protected:
     int energy;
     int money;

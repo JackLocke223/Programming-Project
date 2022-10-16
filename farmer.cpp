@@ -6,7 +6,7 @@
 // function will end the day and restore the farmers energy to 100(full)
 void Farmer::sleep(){
     energy = 100;
-    time = time + 1;
+    set_time(time + 1);
     return;
 }
 
@@ -24,7 +24,7 @@ void Farmer::do_task() {
 }
 
 
-Farmer::Farmer() : Farm::Farm() { 
+Farmer::Farmer() { 
     energy = 100;
 };
 
