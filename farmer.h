@@ -1,9 +1,9 @@
 #ifndef FARMER_H
 #define FARMER_H
 
-//#include "farm.h"
 #include <iostream>
 #include <string>
+#include "farm.h"
 using namespace std;
 
 /* class of farmer, it has functions and data members to keep track of the
@@ -11,7 +11,7 @@ using namespace std;
     from the farm to make money; ie win the game 
     */
 
-class Farmer : public Farm {
+class Farmer {
     protected:
     int energy;
     int money;

@@ -1,5 +1,5 @@
 #include "farm.h"
-//#include "farmer.h" THIS LINE IS CAUSING AN ERROR FOR SOME REASON
+#include "farmer.h" //THIS LINE IS CAUSING AN ERROR FOR SOME REASON
 #include "farm_goods.h"
 #include <iostream> 
 #include <fstream> 
