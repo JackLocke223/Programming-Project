@@ -48,8 +48,8 @@ class Farm {
         Pigs *pig_array_old;
         Pigs *pig_array_new;
         Farm_goods** farm_goods_array;
-        Wheat* wheat_array_old;
-        Wheat* wheat_array_new;
+        Wheat *wheat_array_old;
+        Wheat *wheat_array_new;
         Soybean* soybean_array_old;
         Soybean* soybean_array_new;
         Corn* corn_array_old;
