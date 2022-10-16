@@ -8,6 +8,8 @@
 #include "cows.h"
 #include "crops.h"
 #include "corn.h"
+#include "soybean.h"
+#include "wheat.h"
 
 using namespace std;
 
@@ -91,7 +93,7 @@ void Farm::take_money(int value) {
 
 
 
-    Farm::~Farm() {
+    //Farm::~Farm() {
 
-    };
+    //};
 
