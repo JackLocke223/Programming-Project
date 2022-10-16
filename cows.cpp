@@ -1,9 +1,9 @@
 #include "farmer.h"
 #include "farm.h"
 #include "farm_goods.h"
+#include "cows.h"
 #include <iostream>
 #include <string>
-#include "cows.h"
 
 
 void Cows::buy_goods() {
@@ -17,6 +17,7 @@ void Cows::buy_goods() {
     delete [] cow_array_old;
     cow_array_old = new Cows[count_cows];
     cow_array_old = cow_array_new;
+
 };
 
 void Cows::sell_goods() {
@@ -29,3 +30,11 @@ void Cows::sell_goods() {
     delete delete_cow;
     delete_cow = NULL;
 }
+// need to change this one
+    void Cows::feed() {
+        for (int i = 0; i < count_cows; i++) {
+            //cow_array_old[i].hunger;
+        }
+    };
+    
+
