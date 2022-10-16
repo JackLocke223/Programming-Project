@@ -6,9 +6,26 @@
 #include "pigs.h"
 #include "sheeps.h"
 #include "cows.h"
-//#include "crops.h"
+#include "crops.h"
+#include "corn.h"
 
 using namespace std;
+
+
+Farm::Farm() {
+    time = 1;
+    bank_account = 500;
+    //Farm::animal_array = new Animals[3];
+    Farm::animal_array[0] = Farm::cow_array_old;
+    Farm::animal_array[1] = Farm::pig_array_old;
+    Farm::animal_array[2] = Farm::sheep_array_old;
+
+    Farm::farm_goods_array[0] = Farm::wheat_array_old;
+    Farm::farm_goods_array[1] = Farm::soybean_array_old;
+    Farm::farm_goods_array[2] = Farm::corn_array_old;
+    
+
+};
 
 bool Farm::win() {
     if (bank_account >= 10,000) {
@@ -17,14 +34,6 @@ bool Farm::win() {
     } else {
         return false;
     }
-}
-
-int Farm::get_time(){
-    return time;
-}
-
-void Farm::set_time(int new_time){
-    time = new_time;
 }
 
 /* think we will have to have an animals array which stores "cow sheep chicken" as pointers and they point to 
@@ -68,24 +77,16 @@ void Farm::add_money(int value){
 void Farm::take_money(int value) {
     bank_account = bank_account - value;
 };
+    Farm::Farm() {
+        int time = 1;
+        int bank_account = 500;
+        int cow_count = 0;
+        int sheep_count = 0;
+        int pig_count = 0;
+        int corn_count = 0;
+        int soybean_count = 0;
+        int wheat_count = 0;
 
-Farm::Farm() {
-    int time = 1;
-    int bank_account = 500;
-    //int cow_count = 0;
-    //int sheep_count = 0;
-    //int pig_count = 0;
-    //int corn_count = 0;
-    //int soybean_count = 0;
-    //int wheat_count = 0;
-    //animal_array = new Animals[3];
-    //animal_array[0] = cow_array_old;
-    //animal_array[1] = pig_array_old;
-    //animal_array[2] = sheep_array_old;
-
-    //farm_goods_array[0] = wheat_array_old;
-    //farm_goods_array[1] = soybean_array_old;
-    //farm_goods_array[2] = corn_array_old;
     };
 
 
@@ -93,3 +94,4 @@ Farm::Farm() {
     Farm::~Farm() {
 
     };
+
