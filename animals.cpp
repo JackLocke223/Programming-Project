@@ -29,13 +29,13 @@ void Animals::feed() {
 void Animals::die()  {
         // if hunger goes to 0 of cow
         Animals::cow_chance_of_death = 100; // and dies
-        Cows::=cow_count-1;
+        cow_count=cow_count-1;
         // if hunger goes to 0 of sheep
         Animals:: sheep_chance_of_death = 100;// and dies
-        Farm::sheep_count=sheep_count-1;
+        sheep_count=sheep_count-1;
         // if hunger goes to 0 of pig
         Animals:: pig_chance_of_death = 100;// and dies
-        Farm::pig_count=pig_count-1;
+        pig_count=pig_count-1;
     ;
 }
 

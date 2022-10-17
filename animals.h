@@ -1,7 +1,7 @@
 #ifndef ANIMALS_H
 #define ANIMALS_H
 
-//#include "farmer.h"
+#include "farmer.h"
 #include "farm.h"
 #include "farm_goods.h"
 #include <iostream>
@@ -18,7 +18,6 @@ class Animals : public Farm_goods {
         int sheep_chance_of_death;
         int pig_chance_of_death;
  public:
-        Animals();
         void feed();
         void die();
         void buy_goods();

@@ -79,7 +79,7 @@ void Farm::add_money(int value){
 void Farm::take_money(int value) {
     bank_account = bank_account - value;
 };
-    Farm::Farm() {
+    /*Farm::Farm() {
         int time = 1;
         int bank_account = 500;
         int cow_count = 0;
@@ -89,9 +89,12 @@ void Farm::take_money(int value) {
         int soybean_count = 0;
         int wheat_count = 0;
 
-    };
-
-
+    }; */
+    
+    // function to access what day it is
+    int Farm::get_time() {
+        return time;
+    }
 
     //Farm::~Farm() {
 

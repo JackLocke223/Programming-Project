@@ -5,6 +5,7 @@
 #include <string>
 #include "corn.h"
 
+using namespace std;
 
 void Corn::buy_goods() {
     Corn* new_corn = new Corn;
@@ -28,8 +29,10 @@ void Corn::sell_goods() {
     Corn *delete_corn = &corn_array_old[0];
     delete delete_corn;
     delete_corn = NULL;
-
-
+}
+// function to return how many corn crops there are on the farm.
+    int Corn::get_count() {
+    return count_corn;
+    };
     
 
-}
