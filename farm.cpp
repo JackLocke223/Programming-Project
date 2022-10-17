@@ -142,6 +142,25 @@ cout << object.get_type() << endl;
         return count_cows;
     }
 
+    void Farm::sell_goods(Animals object) {
+        string type_cows = "cows";
+        string type_sheeps = "sheeps";
+        string type_pigs = "pigs";
+//cout << "5" << endl;
+cout << object.get_type() << endl;
+        if (type_cows.compare(object.get_type()) == 0){
+    count_cows--;
+    cow_array_new = new Cows [count_cows];
+    for (int i = 0;  i < count_cows; i++) {
+        cow_array_new[i] = cow_array_old[i+1];
+    }
+    //Animals *delete_cow = &cow_array_old[0];
+    delete [] cow_array_old;
+    //delete_cow = NULL;
+}
+    }
+
+
     /*Cows* new_cow = new Cows;
     //cout << new_cow->age << endl;
     count_cows++;

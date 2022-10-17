@@ -72,7 +72,10 @@ class Farm {
         void sleep();
         Farm();
         ~Farm();
+
+        //think about if these need to be pointers;
         void buy_goods(Animals object);
+        void sell_goods(Animals object);
         int get_cow_count();
 };
 
