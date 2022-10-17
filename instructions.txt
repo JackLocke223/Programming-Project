@@ -1,0 +1,5 @@
+A local farmer needs help running his farm. The farm contains animals such as sheep, cows, 
+and chickens, and crops such as wheat, soybeans, and corn, all of which are worth varying amounts of money and take varying amounts of time to grow. The farmer can buy seeds and young animals, 
+and then water/feed them until they are fully grown, at which point they can be sold for money.
+The farmer has limited energy and can only do so much per day, before he has to sleep. He needs 
+your help to turn his small farm into a thriving business.
