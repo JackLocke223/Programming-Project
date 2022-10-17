@@ -4,7 +4,7 @@
 #include <string>
 #include <iostream>
 class Animals;
-//#include "farmer.h"
+// #include "farmer.h"
 #include "farm_goods.h"
 class Cows;
 class Sheeps;
@@ -24,6 +24,7 @@ class Farm {
     protected:
         int time;
         int bank_account;
+        int count_cows;
 
         /* the arrays storing the produce need to be in the farmer array
         so the buy_goods sell_goods functions can easily access the array
@@ -40,9 +41,9 @@ class Farm {
 
     public:
     // made the arrays public so they can be easily accessed.
-        Animals** animal_array;
-        Cows *cow_array_old;
-        Cows *cow_array_new;
+        //Animals** animal_array;
+        Animals *cow_array_old;
+        Animals *cow_array_new;
         Sheeps* sheep_array_old;
         Sheeps* sheep_array_new;
         Pigs *pig_array_old;
@@ -67,8 +68,11 @@ class Farm {
         void take_money(int value);
         void set_time(int new_time);
         int get_time();
+        void increase_age();
         Farm();
         ~Farm();
+        void buy_goods(Animals object);
+        int get_cow_count();
 };
 
 #endif

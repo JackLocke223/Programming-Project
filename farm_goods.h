@@ -12,6 +12,7 @@ class Farm_goods {
     protected:
     int age;
     int value;
+    //string type;
     public:
     int cow_count;
     int sheep_count;
@@ -20,11 +21,13 @@ class Farm_goods {
     int soybean_count;
     int corn_count;
     int get_age();
-    void increase_age();
-    virtual void feed() = 0;
+    //void set_age();
+    //void increase_age();
+    //virtual void feed() = 0;
+    //string get_type();
     // might be able to make these not abstract
-    virtual void buy_goods() = 0;
-    virtual void sell_goods() = 0;
+    //virtual void buy_goods() = 0;
+    //virtual void sell_goods() = 0;
     Farm_goods();
     ~Farm_goods();
 };

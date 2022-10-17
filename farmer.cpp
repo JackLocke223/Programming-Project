@@ -2,11 +2,17 @@
 #include "farm.h"
 #include <iostream>
 #include <string>
+#include "crops.h"
 
+
+Farmer::Farmer() { 
+    energy = 100;
+};
 // function will end the day and restore the farmers energy to 100(full)
 void Farmer::sleep(){
     energy = 100;
     set_time(time + 1);
+    Farm::increase_age();
     return;
 }
 
@@ -24,9 +30,7 @@ void Farmer::do_task() {
 }
 
 
-Farmer::Farmer() { 
-    energy = 100;
-};
+
 
 Farmer::~Farmer() {
     //delete [] animal_array;
