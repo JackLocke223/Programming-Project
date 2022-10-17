@@ -40,6 +40,7 @@ Animals::Animals(string _type) : Farm_goods() {
 
 void Animals::set_age() {
         age = age +1;
+        cout << "animals set age" << endl;
     }
 
 void Animals::die()  {

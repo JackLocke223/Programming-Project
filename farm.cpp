@@ -96,7 +96,8 @@ void Farm::take_money(int value) {
     int Farm::get_time() {
         return time;
     }
-
+// function that will buy the class of goods the user wants to purchase and
+// dynamically allocate a new array to fit in the new object, and add the object to the array
     void Farm::buy_goods(Animals object) {
         
         string type_cows = "cows";
@@ -124,11 +125,18 @@ cout << object.get_type() << endl;
         }
     }
 
-void Farm::increase_age() {
-        for (int i = 0; i < count_cows; i++) {
+// void Farm::increase_age() {
+//         for (int i = 0; i < count_cows; i++) {
+//         cow_array_old[i].set_age();
+//         cout << " farm increase age" << endl;
+//     }
+// }
+ void Farm::sleep() {
+     for (int i = 0; i < count_cows; i++) {
         cow_array_old[i].set_age();
+        cout << " farm increase age" << endl;
     }
-}
+ }
 
     int Farm::get_cow_count() {
         return count_cows;

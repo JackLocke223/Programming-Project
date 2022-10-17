@@ -69,6 +69,7 @@ class Farm {
         void set_time(int new_time);
         int get_time();
         void increase_age();
+        void sleep();
         Farm();
         ~Farm();
         void buy_goods(Animals object);
