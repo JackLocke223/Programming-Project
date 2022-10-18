@@ -49,7 +49,7 @@ int main(){
          if (input == "cow") {
             if (farmer1.get_money() >= 1500) {
                Cows cow = Cows();
-               cow.buy_goods();
+               farm1.buy_goods(cow);
                farmer1.set_money(farmer1.get_money() - 1500);
             }
             else {cout << "Insufficient funds.\n";}
