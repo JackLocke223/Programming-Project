@@ -16,7 +16,6 @@ class Crops : public Farm_goods {
         void feed();
         void die();
         Crops();
-        //Animals(string _type);
         Crops(string _type, int _hunger);
         void set_age();
         int get_feed_status();

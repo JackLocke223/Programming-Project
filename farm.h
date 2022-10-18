@@ -33,18 +33,7 @@ class Farm {
         int count_wheat;
         int count_soybean;
 
-        /* the arrays storing the produce need to be in the farmer array
-        so the buy_goods sell_goods functions can easily access the array
-        */
-        // new and old arrays are so the arrays can be dynamically increased
-        // in size each time the user buys a product and then the old array 
-        // copied across (like in the prac exam 3. same code)
-
-        // the arrays that will store the animals and crops contained on the farm
-    
-
     public:
-    // made the arrays public so they can be easily accessed.
         Animals *cow_array_old;
         Animals *cow_array_new;
         Animals *sheep_array_old;
@@ -74,6 +63,9 @@ class Farm {
         int get_cow_count();
         int get_sheeps_count();
         int get_pigs_count();
+        int get_corn_count();
+        int get_soybean_count();
+        int get_wheat_count();
         void feed_cows();
         void feed_sheeps();
         void feed_pigs();

@@ -8,23 +8,16 @@
 Farmer::Farmer() { 
     energy = 100;
 };
-// function will end the day and restore the farmers energy to 100(full)
-// void Farmer::sleep(){
-//     energy = 100;
-//     time = time + 1;
-//     cout << "farmer sleep" << endl;
-//     Farm::increase_age();
-//     return;
-// }
 
+// return current money
 int Farmer::get_money() {
     return money;
 }
-
+// change money
 void Farmer::set_money(int _money) {
     money = _money;
 }
-
+// win function
 void Farmer::win() {
     if (money >= 5000) {
         cout << "CONGRATULATIONS!! YOU WIN THE FARM IS SUCCESSFUL" << endl;
@@ -36,6 +29,7 @@ void Farmer::do_task() {
     energy = energy - 10;
 }
 
+// restore energy, change time
 void Farmer::sleep() {
     energy = 100;
     Farm::time = time + 1;

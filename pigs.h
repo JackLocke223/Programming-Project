@@ -10,18 +10,9 @@
 
 class Pigs : public Animals {
     protected:
-    // int sell_value;
-    // int price;
-    // string type;
-    int age;
-
+    
     public:
-    //void feed();
-    //void sell_goods();
-    //int get_sell_value();
-    //int get_price();
     Pigs();
-    //string get_type();
     ~Pigs(){};
 };
 

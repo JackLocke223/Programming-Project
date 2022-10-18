@@ -19,7 +19,6 @@ class Animals : public Farm_goods {
         Animals(string _type, int _hunger);
         void set_age();
         int get_feed_status();
-
         string get_type();
 
 };

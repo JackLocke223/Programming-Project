@@ -18,6 +18,5 @@ int Farm_goods::get_price() {
         return price;
     };
 
-
 Farm_goods::Farm_goods(){};
 Farm_goods::~Farm_goods(){};
