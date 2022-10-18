@@ -20,7 +20,7 @@ Farm::Farm() {
     //Farm::animal_array = new Animals[3];
     cow_array_old = new Animals[0];
     count_cows = 0;
-    Farm::pig_array_old;
+    pig_array_old;
     Farm::sheep_array_old;
 
     Farm::wheat_array_old;
@@ -147,15 +147,17 @@ cout << object.get_type() << endl;
         string type_sheeps = "sheeps";
         string type_pigs = "pigs";
 //cout << "5" << endl;
-cout << object.get_type() << endl;
+        cout << object.get_type() << endl;
         if (type_cows.compare(object.get_type()) == 0){
-    count_cows--;
-    cow_array_new = new Cows [count_cows];
-    for (int i = 0;  i < count_cows; i++) {
-        cow_array_new[i] = cow_array_old[i+1];
-    }
+            count_cows--;
+            cow_array_new = new Cows [count_cows];
+        for (int i = 0;  i < count_cows; i++) {
+            cow_array_new[i] = cow_array_old[i+1];
+        }
     //Animals *delete_cow = &cow_array_old[0];
     delete [] cow_array_old;
+    cow_array_old = new Animals[count_cows];
+    cow_array_old = cow_array_new;
     //delete_cow = NULL;
 }
     }
@@ -184,4 +186,7 @@ cout << object.get_type() << endl;
 }; */
         
 // need to delete arrays in here
-    Farm::~Farm(){};
+    Farm::~Farm(){
+        delete [] cow_array_new;
+        delete [] cow_array_old;
+    };
