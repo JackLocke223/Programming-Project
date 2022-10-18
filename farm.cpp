@@ -115,13 +115,13 @@ cout << object.get_type() << endl;
         //cout << "age new: " << cow_array_new[i].age << "i: " << i << endl;
         //cout << "age old: " << cow_array_old[i].age << "i: " << i << endl;
     
-    cow_array_new[count_cows-1] = object;
+            cow_array_new[count_cows-1] = object;
     //cout << "6" << endl;
-    cout << cow_array_new[count_cows-1].get_age() << endl;
+            cout << cow_array_new[count_cows-1].get_age() << endl;
     //cout << "7" << endl;
-    delete [] cow_array_old;
-    cow_array_old = new Cows[count_cows];
-    cow_array_old = cow_array_new;
+    //delete [] cow_array_old;
+    //cow_array_old = new Cows[count_cows];
+    //cow_array_old = cow_array_new;
         }
     }
 
@@ -187,6 +187,6 @@ cout << object.get_type() << endl;
         
 // need to delete arrays in here
     Farm::~Farm(){
-        delete [] cow_array_new;
+        //delete [] cow_array_new;
         delete [] cow_array_old;
     };
