@@ -7,66 +7,33 @@
 
 using namespace std;
 
-Crops::Crops() {
-        int wheat_hydration = 100;
-        int soybean_hydration = 100;
-        int corn_hydration = 100;
-        int wheat_price = 50;
-        int soybean_price = 150;
-        int corn_price = 100;
+Crops::Crops() : Farm_goods() {
+        hydration = 100;
+        type = "";
+        age = 1;
+        sell_value = 0;
+        price = 0;
 }
 
+Crops::Crops(string _type, int _hydration) : Farm_goods() {
+        hydration = _hydration;
+        type = _type;
+        age = 1;
+}
+// crops hydration function works differently to animals due to real life.
 void Crops::feed() {
-    
-    //if (chosen water_wheat) involves do_task
-    Crops::wheat_hydration;
-    if(wheat_hydration>=100){
-        cout << "Can not water due to wheat being fully hydrated." << endl;
-    } else
-    if(wheat_hydration<100){
-        wheat_hydration=wheat_hydration+10;
-        cout<< "The wheat hydration is at" <<Crops::wheat_hydration << endl;
-    }
-    
-
-        //if (chosen water_soybean) involves do_task
-    Crops::soybean_hydration;
-    if(soybean_hydration>=100) {
-        cout << "Can not water due to soybean being fully hydrated." << endl;
-    };
-    if(soybean_hydration<100){
-        soybean_hydration=soybean_hydration+10;
-        cout<< "The soybeans hydration is at" <<Crops::soybean_hydration << endl;
-    }
-
-           //if (chosen water_corn) involves do_task
-    Crops::corn_hydration;
-    if(corn_hydration>=100) {
-        cout << "Can not water due to corn being fully hydrated." << endl;
-    };
-    if(corn_hydration<100){
-        corn_hydration=corn_hydration+10;
-        cout<< "The corns hydration is at" <<Crops::corn_hydration << endl;
-    }
-
-
-
+    hydration = hydration + 25;
+};
+int Crops::get_feed_status() {
+    return hydration;
 };
 
-void Crops::die()  {
-        if(wheat_hydration = 0) {
-        wheat_count=wheat_count-1;
-        cout << "Wheat has died!!!!." << endl;
-        }
+void Crops::set_age() {
+        age = age +1;
+        //cout << "animals set age" << endl;
+    }
 
-        if(soybean_hydration = 0) {
-        soybean_count=soybean_count-1;
-        cout << "Soybean has died!!!!." << endl;
-        }
 
-        if(corn_hydration = 0) {
-        corn_count=corn_count-1;
-        cout << "Corn has died!!!!." << endl;
-        }
-    ;
-}
+string Crops::get_type() {
+    return type;
+};

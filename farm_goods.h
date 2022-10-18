@@ -13,6 +13,7 @@ class Farm_goods {
     int age;
     int sell_value;
     int price;
+    string type;
     //string type;
     public:
     // int cow_count;

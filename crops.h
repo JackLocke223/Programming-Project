@@ -10,17 +10,20 @@
 using namespace std;
 
 class Crops : public Farm_goods {
-    protected:
-        int wheat_hydration;
-        int soybean_hydration;
-        int corn_hydration;
-        int wheat_price;
-        int soybean_price;
-        int corn_price;
+       protected:
+        int hydration;
+        //string type;
  public:
-        Crops();
         void feed();
         void die();
+        Crops();
+        //Animals(string _type);
+        Crops(string _type, int _hunger);
+        void set_age();
+        int get_feed_status();
+
+        string get_type();
+
 };
 
 #endif

@@ -12,13 +12,7 @@ using namespace std;
 class Animals : public Farm_goods {
     protected:
         int hunger;
-        int cow_chance_of_death;
-        int sheep_chance_of_death;
-        int pig_chance_of_death;
-        // int sell_value;
-        // int price;
-       // int age;
-        string type;
+        // string type;
  public:
         void feed();
         void die();
