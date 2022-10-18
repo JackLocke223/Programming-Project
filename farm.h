@@ -6,6 +6,7 @@
 class Animals;
 // #include "farmer.h"
 #include "farm_goods.h"
+#include "crops.h"
 class Cows;
 class Sheeps;
 class Pigs;
@@ -39,49 +40,48 @@ class Farm {
         // copied across (like in the prac exam 3. same code)
 
         // the arrays that will store the animals and crops contained on the farm
-        
-
-        int print_column;
-        int count_of_printable;
+    
 
     public:
     // made the arrays public so they can be easily accessed.
-        //Animals** animal_array;
         Animals *cow_array_old;
         Animals *cow_array_new;
         Animals *sheep_array_old;
         Animals *sheep_array_new;
         Animals *pig_array_old;
         Animals *pig_array_new;
-        Farm_goods** farm_goods_array;
-        Wheat *wheat_array_old;
-        Wheat *wheat_array_new;
-        Soybean* soybean_array_old;
-        Soybean* soybean_array_new;
-        Corn* corn_array_old;
-        Corn* corn_array_new;
-        //int cow_count;
-        //int sheep_count;
-        //int pig_count;
-        //int wheat_count;
-        //int soybean_count;
-        //int corn_count;
-        bool win();
-        void print_crops();
-        void print_animals(char animal_type);
-        void add_money(int value);
-        void take_money(int value);
+        Crops *wheat_array_old;
+        Crops *wheat_array_new;
+        Crops* soybean_array_old;
+        Crops* soybean_array_new;
+        Crops* corn_array_old;
+        Crops* corn_array_new;
+        
+        // void add_money(int value);
+        // void take_money(int value);
         void set_time(int new_time);
         int get_time();
         void increase_age();
-        void sleep();
+        //void sleep();
         Farm();
         ~Farm();
 
         //think about if these need to be pointers;
         void buy_goods(Animals object);
+        void buy_goods(Crops object);
         void sell_goods(Animals object);
+        void sell_goods(Crops object);
         int get_cow_count();
+        int get_sheeps_count();
+        int get_pigs_count();
+        void feed_cows();
+        void feed_sheeps();
+        void feed_pigs();
+        void feed_corn();
+        void feed_soybean();
+        void feed_wheat();
+        
+        
 };
 
 #endif

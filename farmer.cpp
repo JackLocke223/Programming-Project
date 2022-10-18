@@ -30,9 +30,14 @@ void Farmer::win() {
         cout << "CONGRATULATIONS!! YOU WIN THE FARM IS SUCCESSFUL" << endl;
     }
 }
+
 // function will remove energy when the user commits a task
 void Farmer::do_task() {
-    Farmer::energy = Farmer::energy - 10;
+    energy = energy - 10;
+}
+
+void Farmer::sleep() {
+    energy = 100;
 }
 
 
