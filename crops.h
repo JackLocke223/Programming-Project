@@ -12,7 +12,6 @@ using namespace std;
 class Crops : public Farm_goods {
        protected:
         int hydration;
-        //string type;
  public:
         void feed();
         void die();

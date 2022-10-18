@@ -33,14 +33,14 @@ Farm::Farm() {
   corn_array_old;
 };
 
-bool Farm::win() {
-  if (bank_account >= 10, 000) {
-    cout << "CONGRATULATIONS, you win!" << endl;
-    return true;
-  } else {
-    return false;
-  }
-}
+// bool Farm::win() {
+//   if (bank_account >= 10, 000) {
+//     cout << "CONGRATULATIONS, you win!" << endl;
+//     return true;
+//   } else {
+//     return false;
+//   }
+// }
 
 /* think we will have to have an animals array which stores "cow sheep chicken"
 as pointers and they point to subarrays containing each same for crops. check
@@ -131,7 +131,12 @@ void Farm::buy_goods(Animals object) {
 void Farm::sleep() {
   for (int i = 0; i < count_cows; i++) {
     cow_array_old[i].set_age();
-    // cout << " farm increase age" << endl;
+  }
+  for (int i = 0; i < count_pigs; i++) {
+    pig_array_old[i].set_age();
+  }
+  for (int i = 0; i < count_sheeps; i++) {
+    sheep_array_old[i].set_age();
   }
 }
 

@@ -19,6 +19,7 @@ class Farmer : public Farm {
     int get_money();
     void set_money(int _money);
     void do_task();
+    void win();
     Farmer();
     ~Farmer();
 };

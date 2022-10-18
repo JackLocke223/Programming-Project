@@ -24,7 +24,12 @@ int Farmer::get_money() {
 void Farmer::set_money(int _money) {
     money = _money;
 }
-    
+
+void Farmer::win() {
+    if (money >= 5000) {
+        cout << "CONGRATULATIONS!! YOU WIN THE FARM IS SUCCESSFUL" << endl;
+    }
+}
 // function will remove energy when the user commits a task
 void Farmer::do_task() {
     Farmer::energy = Farmer::energy - 10;
