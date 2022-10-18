@@ -15,7 +15,7 @@ class Cows : public Animals {
    // Cows *cow_array_old;
     //Cows *cow_array_new;
     int sell_value;
-    int buy_value;
+    int price;
     // string type;
     int age;
 
@@ -24,6 +24,8 @@ class Cows : public Animals {
     //void buy_goods();
     //void feed();
     //void sell_goods();
+    int get_sell_value();
+    int get_price();
     Cows();
     //string get_type();
     ~Cows(){};

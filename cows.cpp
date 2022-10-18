@@ -11,6 +11,13 @@ Cows::Cows() : Animals("cows") {
     // type = "cows";
     //cow_array_old = new Cows[0];
 }
+
+int Cows::get_sell_value() {
+    return sell_value;
+};
+    int Cows::get_price() {
+        return price;
+    };
 /*
 void Cows::buy_goods() {
 
