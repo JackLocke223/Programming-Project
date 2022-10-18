@@ -24,15 +24,21 @@ int Farm_goods::get_age(){return age;}
     // void Farm_goods::set_age() {
     //     age = age +1;
     // }
-
+int Farm_goods::get_sell_value() {
+    return sell_value;
+};
+int Farm_goods::get_price() {
+        return price;
+    };
     Farm_goods::Farm_goods(){
-        cow_count = 0;
-        sheep_count = 0;
-        pig_count = 0;
-        corn_count = 0;
-        soybean_count = 0;
-        wheat_count = 0;
+        // cow_count = 0;
+        // sheep_count = 0;
+        // pig_count = 0;
+        // corn_count = 0;
+        // soybean_count = 0;
+        // wheat_count = 0;
         //age = 0;
+        //sell_value = 432;
     };
 
     Farm_goods::~Farm_goods(){};

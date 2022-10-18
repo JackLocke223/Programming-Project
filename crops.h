@@ -19,7 +19,7 @@ class Crops : public Farm_goods {
         int corn_price;
  public:
         Crops();
-        void water();
+        void feed();
         void die();
 };
 

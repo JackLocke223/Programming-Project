@@ -6,18 +6,30 @@
 #include <iostream>
 #include <string>
 //int Cows::count_cows = 0;
-Cows::Cows() : Animals("cows") {
-    Cows::age = 1;
+// Cows::Cows() : Animals("cows", 100) {
+//     Cows::age = 1;
+//     hunger = 100;
+//     // type = "cows";
+//     //cow_array_old = new Cows[0];
+// }
+
+Cows::Cows() {
+    type = "cows";
+    age = 1;
+    hunger = 100;
+    sell_value = 3000;
+    price = 1500;
+
     // type = "cows";
     //cow_array_old = new Cows[0];
 }
 
-int Cows::get_sell_value() {
-    return sell_value;
-};
-    int Cows::get_price() {
-        return price;
-    };
+// int Cows::get_sell_value() {
+//     return sell_value;
+// };
+//     int Cows::get_price() {
+//         return price;
+//     };
 /*
 void Cows::buy_goods() {
 

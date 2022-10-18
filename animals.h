@@ -11,22 +11,22 @@ using namespace std;
 
 class Animals : public Farm_goods {
     protected:
-        int cow_hunger;
-        int sheep_hunger;
-        int pig_hunger;
+        int hunger;
         int cow_chance_of_death;
         int sheep_chance_of_death;
         int pig_chance_of_death;
+        // int sell_value;
+        // int price;
        // int age;
         string type;
  public:
-        //void feed();
+        void feed();
         void die();
-        //void buy_goods();
-        //void sell_goods();
         Animals();
-        Animals(string _type);
+        //Animals(string _type);
+        Animals(string _type, int _hunger);
         void set_age();
+        int get_feed_status();
 
         string get_type();
 

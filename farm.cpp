@@ -104,10 +104,11 @@ void Farm::take_money(int value) {
         string type_sheeps = "sheeps";
         string type_pigs = "pigs";
 //cout << "5" << endl;
-        cout << object.get_type() << endl;
+        //cout << object.get_type() << endl;
         if (type_cows.compare(object.get_type()) == 0){
             count_cows++;
-            cout << count_cows << endl;
+            //cout << count_cows << endl;
+            //delete [] cow_array_new;
             cow_array_new = new Cows [count_cows];
             for (int i = 0;  i < count_cows-1; i++) {
             cow_array_new[i] = cow_array_old[i];
@@ -120,8 +121,8 @@ void Farm::take_money(int value) {
             cout << cow_array_new[count_cows-1].get_age() << endl;
     //cout << "7" << endl;
     //delete [] cow_array_old;
-    //cow_array_old = new Cows[count_cows];
-    //cow_array_old = cow_array_new;
+    cow_array_old = new Cows[count_cows];
+    cow_array_old = cow_array_new;
         }
     }
 
@@ -134,7 +135,7 @@ void Farm::take_money(int value) {
  void Farm::sleep() {
      for (int i = 0; i < count_cows; i++) {
         cow_array_old[i].set_age();
-        cout << " farm increase age" << endl;
+        //cout << " farm increase age" << endl;
     }
  }
 
@@ -146,19 +147,22 @@ void Farm::take_money(int value) {
         string type_cows = "cows";
         string type_sheeps = "sheeps";
         string type_pigs = "pigs";
-//cout << "5" << endl;
+
         cout << object.get_type() << endl;
+
         if (type_cows.compare(object.get_type()) == 0){
             count_cows--;
+           // delete [] cow_array_new;
             cow_array_new = new Cows [count_cows];
         for (int i = 0;  i < count_cows; i++) {
             cow_array_new[i] = cow_array_old[i+1];
         }
-    //Animals *delete_cow = &cow_array_old[0];
-    delete [] cow_array_old;
+    // delete the old array to avoid memory leaks and have the old array
+    // pointer = the new updated array
+    //delete [] cow_array_old;
     cow_array_old = new Animals[count_cows];
     cow_array_old = cow_array_new;
-    //delete_cow = NULL;
+    
 }
     }
 
@@ -188,5 +192,5 @@ void Farm::take_money(int value) {
 // need to delete arrays in here
     Farm::~Farm(){
         //delete [] cow_array_new;
-        delete [] cow_array_old;
+        //delete [] cow_array_old;
     };

@@ -14,9 +14,9 @@ class Pigs : public Animals {
     static bool pigs_fed();
 
     public:
-    Pigs *pig_array_old;
-    Pigs *pig_array_new;
-    static int get_count(){return count_pigs;};
+    //Pigs *pig_array_old;
+    //Pigs *pig_array_new;
+    //static int get_count(){return count_pigs;};
     void buy_goods();
     void feed();
     void sell_goods();
