@@ -5,6 +5,7 @@
 #include <iostream>
 #include <string>
 
+// constructor to set up initial values
 Soybean::Soybean() {
     hydration = 100;
     type = "soybean";

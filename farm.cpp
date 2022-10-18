@@ -18,7 +18,6 @@ using namespace std;
 Farm::Farm() {
   time = 1;
   bank_account = 500;
-  // Farm::animal_array = new Animals[3];
   cow_array_old = new Animals[0];
   count_cows = 0;
   count_sheeps = 0;
@@ -33,65 +32,10 @@ Farm::Farm() {
   corn_array_old = new Crops[0];
 };
 
-// bool Farm::win() {
-//   if (bank_account >= 10, 000) {
-//     cout << "CONGRATULATIONS, you win!" << endl;
-//     return true;
-//   } else {
-//     return false;
-//   }
-// }
-
-/* think we will have to have an animals array which stores "cow sheep chicken"
-as pointers and they point to subarrays containing each same for crops. check
-the Farm constructor i made the above how we store it */
-
-// this is a mess i need to fix this, isnt how i want to access
-
-/* do we want to do the print array like this? it will be easier i think
-and we shouldnt need another abstract or polymorphism function */
-/*
-void Farm::print_animals(char animal_type) {
-    switch  (animal_type) {
-        case 'c' :
-        Farm::print_column = 0;
-        Farm::count_of_printable = Cows::get_count();
-        break;
-        case 's':
-        Farm::print_column = 1;
-        Farm::count_of_printable = Sheeps::get_count();
-        break;
-        case 'p' :
-        Farm::print_column = 2;
-        Farm::count_of_printable = Pigs::get_count();
-        break;
-    }
-    // for loop to print the column of the type of animals the user wants to see
-    // will have to driver test this function and edit
-    for (int i = 0; i < count_of_printable; i++) {
-        for (int j = print_column; j < print_column+1; j++) {
-            cout << ((*(animal_array+j))+i) << endl;
-        }
-    }
-} */
-
-// void Farm::add_money(int value) { bank_account = bank_account + value; };
-
-// void Farm::take_money(int value) { bank_account = bank_account - value; };
-/*Farm::Farm() {
-    int time = 1;
-    int bank_account = 500;
-    int cow_count = 0;
-    int sheep_count = 0;
-    int pig_count = 0;
-    int corn_count = 0;
-    int soybean_count = 0;
-    int wheat_count = 0;
-
-}; */
 
 // function to access what day it is
 int Farm::get_time() { return time; }
+
 // function that will buy the class of goods the user wants to purchase and
 // dynamically allocate a new array to fit in the new object, and add the object
 // to the array
@@ -99,43 +43,38 @@ void Farm::buy_goods(Animals object) {
   string type_cows = "cows";
   string type_sheeps = "sheeps";
   string type_pigs = "pigs";
-  // cout << "5" << endl;
-  // cout << object.get_type() << endl;
+  //if statements to use polymorphism to determine which animal is being bought
   if (type_cows.compare(object.get_type()) == 0) {
+    //increase cow count and allocate space for new cow
     count_cows++;
-    // cout << count_cows << endl;
-    // delete [] cow_array_new;
     cow_array_new = new Cows[count_cows];
+    //copy old cow array to new space
     for (int i = 0; i < count_cows - 1; i++) {
       cow_array_new[i] = cow_array_old[i];
     }
-    // cout << "age new: " << cow_array_new[i].age << "i: " << i << endl;
-    // cout << "age old: " << cow_array_old[i].age << "i: " << i << endl;
-
+    // add new object into the new array
     cow_array_new[count_cows - 1] = object;
-    // cout << "6" << endl;
-    cout << cow_array_new[count_cows - 1].get_age() << endl;
-    // cout << "7" << endl;
-    // delete [] cow_array_old;
+    //delete old array to avoid memory leaks
+    delete [] cow_array_old;
+    //allocate new space for old array and have it = new array
     cow_array_old = new Cows[count_cows];
     cow_array_old = cow_array_new;
   }
+
+  // same for pigs
   if (type_pigs.compare(object.get_type()) == 0) {
     count_pigs++;
-    // cout << count_cows << endl;
-    // delete [] cow_array_new;
     pig_array_new = new Pigs[count_pigs];
     for (int i = 0; i < count_pigs - 1; i++) {
       pig_array_new[i] = pig_array_old[i];
     }
-    // cout << "age new: " << cow_array_new[i].age << "i: " << i << endl;
-    // cout << "age old: " << cow_array_old[i].age << "i: " << i << endl;
-
+   
     pig_array_new[count_pigs - 1] = object;
-    cout << pig_array_new[count_pigs - 1].get_age() << endl;
+    delete [] pig_array_old;
     pig_array_old = new Pigs[count_pigs];
     pig_array_old = pig_array_new;
-  } // check for sheep
+  } 
+  // check for sheep
   if (type_sheeps.compare(object.get_type()) == 0) {
     count_sheeps++;
     sheep_array_new = new Sheeps[count_sheeps];
@@ -143,52 +82,42 @@ void Farm::buy_goods(Animals object) {
       sheep_array_new[i] = sheep_array_old[i];
     }
     sheep_array_new[count_sheeps - 1] = object;
+    delete [] sheep_array_old;
     sheep_array_old = new Sheeps[count_sheeps];
     sheep_array_old = sheep_array_new;
   }
 }
-
+// same as above but for crops
 void Farm::buy_goods(Crops object){
   string type_corn = "corn";
   string type_soybean = "soybean";
   string type_wheat = "wheat";
-  // cout << "5" << endl;
-  // cout << object.get_type() << endl;
+// check for corn
   if (type_corn.compare(object.get_type()) == 0) {
     count_corn++;
-    // cout << count_cows << endl;
-    // delete [] cow_array_new;
     corn_array_new = new Corn[count_corn];
     for (int i = 0; i < count_cows - 1; i++) {
       corn_array_new[i] = corn_array_old[i];
     }
-    // cout << "age new: " << cow_array_new[i].age << "i: " << i << endl;
-    // cout << "age old: " << cow_array_old[i].age << "i: " << i << endl;
-
     corn_array_new[count_corn - 1] = object;
-    // cout << "6" << endl;
-    //cout << cow_array_new[count_cows - 1].get_age() << endl;
-    // cout << "7" << endl;
-    // delete [] cow_array_old;
+    delete [] corn_array_old;
     corn_array_old = new Corn[count_corn];
     corn_array_old = corn_array_new;
   }
+  //check for soybean
   if (type_soybean.compare(object.get_type()) == 0) {
     count_soybean++;
-    // cout << count_cows << endl;
-    // delete [] cow_array_new;
     soybean_array_new = new Soybean[count_soybean];
     for (int i = 0; i < count_soybean - 1; i++) {
       soybean_array_new[i] = soybean_array_old[i];
     }
-    // cout << "age new: " << cow_array_new[i].age << "i: " << i << endl;
-    // cout << "age old: " << cow_array_old[i].age << "i: " << i << endl;
-
+   
     soybean_array_new[count_soybean - 1] = object;
-    //cout << pig_array_new[count_pigs - 1].get_age() << endl;
+    delete [] soybean_array_old;
     soybean_array_old = new Soybean[count_soybean];
     soybean_array_old = soybean_array_new;
-  } // check for sheep
+  } 
+  // check for wheat
   if (type_wheat.compare(object.get_type()) == 0) {
     count_wheat++;
     wheat_array_new = new Wheat[count_wheat];
@@ -196,12 +125,13 @@ void Farm::buy_goods(Crops object){
       wheat_array_new[i] = wheat_array_old[i];
     }
     wheat_array_new[count_wheat - 1] = object;
+    delete [] wheat_array_old;
     wheat_array_old = new Wheat[count_wheat];
     wheat_array_old = wheat_array_new;
   }
 }
 
-
+// will increase the age of all the owned farm_goods
 void Farm::increase_age() {
   for (int i = 0; i < count_cows; i++) {
     cow_array_old[i].set_age();
@@ -222,128 +152,101 @@ void Farm::increase_age() {
     wheat_array_old[i].set_age();
   }
 }
-
+// functions to return the current count of owned goods
 int Farm::get_cow_count() { return count_cows; }
 int Farm::get_sheeps_count() { return count_sheeps; }
 int Farm::get_pigs_count() { return count_pigs; }
+int Farm::get_corn_count() { return count_corn; }
+int Farm::get_soybean_count() { return count_soybean; }
+int Farm::get_wheat_count() { return count_wheat; }
 
+// function to sell an owned animal object
 void Farm::sell_goods(Animals object) {
   string type_cows = "cows";
   string type_sheeps = "sheeps";
   string type_pigs = "pigs";
-
-  //cout << object.get_type() << endl;
-
+// check if cows
   if (type_cows.compare(object.get_type()) == 0) {
+    //decrease cow count
     count_cows--;
-    // delete [] cow_array_new;
+    //allocate new space for after sold object
     cow_array_new = new Cows[count_cows];
+    // copy old array across minus the first object
     for (int i = 0; i < count_cows; i++) {
       cow_array_new[i] = cow_array_old[i + 1];
     }
-    // delete the old array to avoid memory leaks and have the old array
-    // pointer = the new updated array
-    // delete [] cow_array_old;
+    //delete old array to avoid memory leak
+    delete [] cow_array_old;
+    // allocate new space and copy
     cow_array_old = new Cows[count_cows];
     cow_array_old = cow_array_new;
   }
+  // check for sheep and do the same
   if (type_sheeps.compare(object.get_type()) == 0) {
     count_sheeps--;
-    // delete [] cow_array_new;
     sheep_array_new = new Sheeps[count_sheeps];
     for (int i = 0; i < count_sheeps; i++) {
       sheep_array_new[i] = sheep_array_old[i + 1];
     }
-    // delete the old array to avoid memory leaks and have the old array
-    // pointer = the new updated array
-    // delete [] cow_array_old;
+    delete [] sheep_array_old;
     sheep_array_old = new Sheeps[count_sheeps];
     sheep_array_old = sheep_array_new;
   }
+  // check for pigs and do the same
   if (type_pigs.compare(object.get_type()) == 0) {
     count_pigs--;
-    // delete [] cow_array_new;
     pig_array_new = new Pigs[count_pigs];
     for (int i = 0; i < count_pigs; i++) {
       pig_array_new[i] = pig_array_old[i + 1];
     }
-    // delete the old array to avoid memory leaks and have the old array
-    // pointer = the new updated array
-    // delete [] cow_array_old;
+    delete [] pig_array_old;
     pig_array_old = new Pigs[count_pigs];
     pig_array_old = pig_array_new;
   }
 }
-
+// the exact same as above but for Crops
 void Farm::sell_goods(Crops object) {
   string type_corn = "corn";
   string type_soybean = "soybean";
   string type_wheat = "wheat";
 
-  //cout << object.get_type() << endl;
-
   if (type_corn.compare(object.get_type()) == 0) {
     count_corn--;
-    // delete [] cow_array_new;
     corn_array_new = new Corn[count_corn];
-    for (int i = 0; i < count_cows; i++) {
+    for (int i = 0; i < count_corn; i++) {
       corn_array_new[i] = corn_array_old[i + 1];
     }
-    // delete the old array to avoid memory leaks and have the old array
-    // pointer = the new updated array
-    // delete [] cow_array_old;
+     delete [] corn_array_old;
     corn_array_old = new Corn[count_corn];
     corn_array_old = corn_array_new;
   }
+  // check soybean
   if (type_soybean.compare(object.get_type()) == 0) {
     count_soybean--;
-    // delete [] cow_array_new;
     soybean_array_new = new Soybean[count_soybean];
-    for (int i = 0; i < count_sheeps; i++) {
+    for (int i = 0; i < count_soybean; i++) {
       soybean_array_new[i] = soybean_array_old[i + 1];
     }
-    // delete the old array to avoid memory leaks and have the old array
-    // pointer = the new updated array
-    // delete [] cow_array_old;
-    soybean_array_old = new Soybean[count_sheeps];
-    sheep_array_old = sheep_array_new;
+    delete [] soybean_array_old;
+    soybean_array_old = new Soybean[count_soybean];
+    soybean_array_old = soybean_array_new;
   }
+  // check for wheat
   if (type_wheat.compare(object.get_type()) == 0) {
     count_wheat--;
-    // delete [] cow_array_new;
     wheat_array_new = new Wheat[count_wheat];
     for (int i = 0; i < count_wheat; i++) {
       wheat_array_new[i] = wheat_array_old[i + 1];
     }
-    // delete the old array to avoid memory leaks and have the old array
-    // pointer = the new updated array
-    // delete [] cow_array_old;
-    wheat_array_old = new Wheat[count_pigs];
-    pig_array_old = pig_array_new;
+    delete [] wheat_array_old;
+    wheat_array_old = new Wheat[count_wheat];
+    wheat_array_old = wheat_array_new;
   }
 }
 
-/*Cows* new_cow = new Cows;
-//cout << new_cow->age << endl;
-count_cows++;
-//cout << count_cows << endl;
-cow_array_new = new Cows [count_cows];
-/*if (count_cows < 2) {
-    cow_array_old[0] = *new_cow;
-} else { *//*
-    for (int i = 0;  i < count_cows-1; i++) {
-        cow_array_new[i] = cow_array_old[i];
-        cout << "age new: " << cow_array_new[i].age << "i: " << i << endl;
-        cout << "age old: " << cow_array_old[i].age << "i: " << i << endl;
-    
-    cow_array_new[count_cows-1] = *new_cow;
-    //cout << cow_array_new[count_cows-1] << endl;
-    delete [] cow_array_old;
-    cow_array_old = new Cows[count_cows];
-    cow_array_old = cow_array_new;
-    }
-
-}; */
+// basic function just to run through the array of objects but then calls
+// abstract feed function which works differently depending on the type of 
+// object
 void Farm::feed_cows() {
   for (int i = 0; i < count_cows; i++) {
     cow_array_old[i].feed();
@@ -374,7 +277,7 @@ void Farm::feed_wheat() {
     wheat_array_old[i].feed();
   }
 }
-// need to delete arrays in here
+
 Farm::~Farm(){
     // delete [] cow_array_new;
     // delete [] cow_array_old;

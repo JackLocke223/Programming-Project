@@ -7,6 +7,7 @@ class Animals;
 // #include "farmer.h"
 #include "farm_goods.h"
 #include "crops.h"
+class Crops;
 class Cows;
 class Sheeps;
 class Pigs;
@@ -57,16 +58,15 @@ class Farm {
         Crops* corn_array_old;
         Crops* corn_array_new;
         
-        // void add_money(int value);
-        // void take_money(int value);
+      
         void set_time(int new_time);
         int get_time();
         void increase_age();
-        //void sleep();
+      
         Farm();
         ~Farm();
 
-        //think about if these need to be pointers;
+    
         void buy_goods(Animals object);
         void buy_goods(Crops object);
         void sell_goods(Animals object);

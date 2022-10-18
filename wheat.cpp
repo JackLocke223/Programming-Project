@@ -5,6 +5,7 @@
 #include <iostream>
 #include <string>
 
+// constructor to set up initial values
 Wheat::Wheat() {
     hydration = 100;
     type = "wheat";

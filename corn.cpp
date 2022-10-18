@@ -7,6 +7,7 @@
 
 using namespace std;
 
+// constructor to set up initial values
 Corn::Corn() {
     hydration = 100;
     sell_value = 175;

@@ -1,4 +1,4 @@
-/*#include "farm.h"
+#include "farm.h"
 #include "farm_goods.h"
 #include "animals.h"
 #include "cows.h"
@@ -33,9 +33,13 @@ int main (){
     }
     farm.Farm::cow_array_new[0].feed();
     cout << "hunger of first cow after feed :" << farm.Farm::cow_array_new[0].get_feed_status() << endl;
-    farm.sleep();
+    farm.increase_age();
+    farmer1.sleep();
+    cout << "time is : " << farmer1.get_time() << endl;
+    
     for (int i = 0; i < 3; i++) {
     cout << "age of " << i << " cow: " << farm.Farm::cow_array_new[i].get_age() << "i: " << i << endl;
+    cout << "hunger : " << farm.Farm::cow_array_old[i].get_feed_status() << endl;
     }
     farm.sell_goods(first_cow);
     for (int i = 0; i < farm.get_cow_count(); i++) {
@@ -45,4 +49,4 @@ int main (){
     //Cows second_cow;
     //second_cow.Cows::buy_goods();
 
-}*/
+}

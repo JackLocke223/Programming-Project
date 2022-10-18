@@ -20,6 +20,7 @@ class Farmer : public Farm {
     void set_money(int _money);
     void do_task();
     void win();
+    void sleep();
     Farmer();
     ~Farmer();
 };

@@ -38,6 +38,7 @@ void Farmer::do_task() {
 
 void Farmer::sleep() {
     energy = 100;
+    Farm::time = time + 1;
 }
 
 
