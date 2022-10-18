@@ -1,27 +1,29 @@
 #ifndef PIGS_H
 #define PIGS_H
 
-//#include "farmer.h"
+#include "farmer.h"
 #include "farm.h"
-#include "animals.h"
 #include "farm_goods.h"
+#include "animals.h"
 #include <iostream>
 #include <string>
 
 class Pigs : public Animals {
     protected:
-    static int count_pigs;
-    static bool pigs_fed();
+    // int sell_value;
+    // int price;
+    // string type;
+    int age;
 
     public:
-    //Pigs *pig_array_old;
-    //Pigs *pig_array_new;
-    //static int get_count(){return count_pigs;};
-    void buy_goods();
-    void feed();
-    void sell_goods();
+    //void feed();
+    //void sell_goods();
+    //int get_sell_value();
+    //int get_price();
+    Pigs();
+    //string get_type();
+    ~Pigs(){};
 };
-static int count_pigs = 0;
-static bool pigs_fed = false;
+
 
 #endif

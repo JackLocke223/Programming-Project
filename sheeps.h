@@ -1,28 +1,29 @@
 #ifndef SHEEPS_H
 #define SHEEPS_H
 
-//#include "farmer.h"
-#include "animals.h"
+#include "farmer.h"
 #include "farm.h"
 #include "farm_goods.h"
+#include "animals.h"
 #include <iostream>
 #include <string>
 
 class Sheeps : public Animals {
     protected:
-    static int count_sheeps;
-    static bool sheeps_fed();
-    Sheeps *sheep_array_old;
-    Sheeps *sheep_array_new;
+    // int sell_value;
+    // int price;
+    // string type;
+    int age;
 
     public:
-    static int get_count(){return count_sheeps;};
-    void buy_goods();
-    void feed();
-    void sell_goods();
-    bool ready_to_sell();
+    //void feed();
+    //void sell_goods();
+    //int get_sell_value();
+    //int get_price();
+    Sheeps();
+    //string get_type();
+    ~Sheeps(){};
 };
-static int count_sheeps = 0;
-static bool sheeps_fed = false;
+
 
 #endif

@@ -1,4 +1,4 @@
-#include <iostream> 
+/*#include <iostream> 
 #include <fstream> 
 #include <string>
 using namespace std;
@@ -9,4 +9,4 @@ int main(){
         cout << text << endl;
    }
    file.close();
-}
+}*/

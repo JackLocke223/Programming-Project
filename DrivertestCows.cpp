@@ -1,4 +1,4 @@
-#include "farm.h"
+/*#include "farm.h"
 #include "farm_goods.h"
 #include "animals.h"
 #include "cows.h"
@@ -45,4 +45,4 @@ int main (){
     //Cows second_cow;
     //second_cow.Cows::buy_goods();
 
-}
+}*/

@@ -25,6 +25,11 @@ class Farm {
         int time;
         int bank_account;
         int count_cows;
+        int count_pigs;
+        int count_sheeps;
+        int count_corn;
+        int count_wheat;
+        int count_soybean;
 
         /* the arrays storing the produce need to be in the farmer array
         so the buy_goods sell_goods functions can easily access the array
@@ -44,10 +49,10 @@ class Farm {
         //Animals** animal_array;
         Animals *cow_array_old;
         Animals *cow_array_new;
-        Sheeps* sheep_array_old;
-        Sheeps* sheep_array_new;
-        Pigs *pig_array_old;
-        Pigs *pig_array_new;
+        Animals *sheep_array_old;
+        Animals *sheep_array_new;
+        Animals *pig_array_old;
+        Animals *pig_array_new;
         Farm_goods** farm_goods_array;
         Wheat *wheat_array_old;
         Wheat *wheat_array_new;

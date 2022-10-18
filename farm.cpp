@@ -21,12 +21,16 @@ Farm::Farm() {
   // Farm::animal_array = new Animals[3];
   cow_array_old = new Animals[0];
   count_cows = 0;
-  pig_array_old;
-  Farm::sheep_array_old;
-
-  Farm::wheat_array_old;
-  Farm::soybean_array_old;
-  Farm::corn_array_old;
+  count_sheeps = 0;
+  count_pigs = 0;
+  count_wheat = 0;
+  count_soybean = 0;
+  count_corn = 0;
+  pig_array_old = new Animals[0];
+  sheep_array_old = new Animals[0];
+  wheat_array_old;
+  soybean_array_old;
+  corn_array_old;
 };
 
 bool Farm::win() {

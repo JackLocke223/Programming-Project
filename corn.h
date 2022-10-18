@@ -10,13 +10,16 @@
 
 class Corn : public Crops {
     protected:
-    
+    static int count_corn;
+    Corn *corn_array_old;
+    Corn *corn_array_new;
 
     public:
    
     Corn();
     ~Corn(){};
 };
+static int count_corn = 0;
 
 
 #endif

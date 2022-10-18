@@ -7,7 +7,6 @@
 
 Farmer::Farmer() { 
     energy = 100;
-    cout << "farmer construct worked" << endl;
 };
 // function will end the day and restore the farmers energy to 100(full)
 // void Farmer::sleep(){
