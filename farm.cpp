@@ -104,7 +104,7 @@ void Farm::take_money(int value) {
         string type_sheeps = "sheeps";
         string type_pigs = "pigs";
 //cout << "5" << endl;
-cout << object.get_type() << endl;
+        cout << object.get_type() << endl;
         if (type_cows.compare(object.get_type()) == 0){
             count_cows++;
             cout << count_cows << endl;
