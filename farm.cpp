@@ -318,7 +318,7 @@ void Farm::sell_goods(Crops object) {
     // delete the old array to avoid memory leaks and have the old array
     // pointer = the new updated array
     // delete [] cow_array_old;
-    wheat_array_old = new Animals[count_pigs];
+    wheat_array_old = new Wheat[count_pigs];
     pig_array_old = pig_array_new;
   }
 }
