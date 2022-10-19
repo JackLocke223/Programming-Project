@@ -6,8 +6,10 @@
 #include <string>
 
 // constructor to set up initial values
-Soybean::Soybean() {
-    hydration = 100;
+Soybean::Soybean()
+{
+    max_age = 2;
+    hydration = 50;
     type = "soybean";
     sell_value = 275;
     price = 150;

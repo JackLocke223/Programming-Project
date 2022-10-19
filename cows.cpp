@@ -7,10 +7,12 @@
 #include <string>
 
 // constructor to set up initial values
-Cows::Cows() {
+Cows::Cows()
+{
     type = "cows";
     age = 1;
-    hunger = 100;
+    hunger = 50;
     sell_value = 3000;
     price = 1500;
+    max_age = 5;
 }

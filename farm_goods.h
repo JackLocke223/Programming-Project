@@ -14,6 +14,7 @@ class Farm_goods {
     int price;
     string type;
     public:
+    int max_age;
     int get_age();
     virtual void feed() = 0;
     virtual int get_feed_status() = 0;

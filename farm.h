@@ -34,6 +34,12 @@ class Farm {
         int count_soybean;
 
     public:
+        int cow_max_age;
+        int sheep_max_age;
+        int pig_max_age;
+        int corn_max_age;
+        int wheat_max_age;
+        int soybean_max_age;
         Animals *cow_array_old;
         Animals *cow_array_new;
         Animals *sheep_array_old;
@@ -51,6 +57,7 @@ class Farm {
         void set_time(int new_time);
         int get_time();
         void increase_age();
+        void decrease_hunger();
       
         Farm();
         ~Farm();

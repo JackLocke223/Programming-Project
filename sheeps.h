@@ -8,16 +8,13 @@
 #include <iostream>
 #include <string>
 
-class Sheeps : public Animals {
-    protected:
-   
-
-    public:
-   
+class Sheeps : public Animals
+{
+protected:
+public:
     Sheeps();
-   
+
     ~Sheeps(){};
 };
-
 
 #endif

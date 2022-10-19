@@ -8,10 +8,10 @@
 #include <iostream>
 #include <string>
 
-class Wheat : public Crops {
-    protected:
-   
-    public:
+class Wheat : public Crops
+{
+protected:
+public:
     Wheat();
     ~Wheat(){};
 };

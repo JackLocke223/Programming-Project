@@ -1,2 +1,2 @@
 makeproject:
-	g++ farm.cpp farmer.cpp farm_goods.cpp animals.cpp crops.cpp cows.cpp pigs.cpp sheeps.cpp corn.cpp soybean.cpp wheat.cpp main.cpp instructions.cpp -o project_farm
+	g++ Farm.cpp Farmer.cpp Farm_goods.cpp Animals.cpp Crops.cpp Cows.cpp Pigs.cpp Sheeps.cpp Corn.cpp Soybean.cpp Wheat.cpp Main.cpp -o project_farm

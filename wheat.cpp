@@ -6,8 +6,10 @@
 #include <string>
 
 // constructor to set up initial values
-Wheat::Wheat() {
-    hydration = 100;
+Wheat::Wheat()
+{
+    max_age = 1;
+    hydration = 50;
     type = "wheat";
     sell_value = 100;
     price = 50;

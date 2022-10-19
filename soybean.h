@@ -8,15 +8,12 @@
 #include <iostream>
 #include <string>
 
-class Soybean : public Crops {
-    protected:
-
-
-    public:
-   Soybean();
-   ~Soybean(){};
-
+class Soybean : public Crops
+{
+protected:
+public:
+    Soybean();
+    ~Soybean(){};
 };
-
 
 #endif
